@@ -2,10 +2,10 @@
 const ccxt = require('ccxt');
 const Line = require('./module/line.js');
 const myLine = new Line();
-process.env.LINE_TOKEN ="amudw1KrdqYFxLw8kWSkNzQsciRbA9C7W0amgG6JRqZ";
+const Config = require('./config/key.js');
 const bitflyer = new ccxt.bitflyer();
 const interbal = 10000;
-myLine.setToken(process.env.LINE_TOKEN);
+myLine.setToken(Config.LINE_TOKEN);
 let getmarkets = require('./module/getmarkets.js');
 
 getmarkets.get();
